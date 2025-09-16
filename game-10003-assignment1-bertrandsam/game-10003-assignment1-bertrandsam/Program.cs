@@ -6,10 +6,10 @@ using System.Net;
 
 Console.Write("Please Input Your Desired Name Here: ");
 Console.Write("");
-string UserInputA = (Console.ReadLine());
+string userInputA = (Console.ReadLine());
 
 // General Welcoming to the game for the sake of User Interaction.
-Console.WriteLine("Welcome " + (UserInputA) + " to my game!");
+Console.WriteLine("Welcome " + (userInputA) + " to my game!");
 Console.WriteLine("In this game, you will be fighting against a single AI Creature: The Goblin.\nI urge you to watch your spelling\nas this game is still Very specific. If you are prompted to choose an option,\nmake sure to spell your answer EXACTLY as it is shown.\n\nThank you for your listening. Please enjoy!\n");
 Console.WriteLine("Good Luck!");
 
@@ -35,7 +35,7 @@ int x = (goblinHealth);
 // These are the lines for both the player and goblin's health
 // The lines inbetween are simply for the sake of looks and appearance
 Console.WriteLine("\n Please make sure to read the warning above!\n\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -44,16 +44,16 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-string UserAction = (Console.ReadLine());
+string userAction = (Console.ReadLine());
 
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
     if (userAttack == "Basic Attack")
     {
-        x = (goblinHealth - 10);
+        x -= 10;
         Console.WriteLine("\n\nGoblin Health: " + x);
         Console.WriteLine("\nYou've dealt 10 points of damage to the Goblin.\n\nYour turn has ended. The Goblin makes a move!\n\n");
     }
@@ -63,13 +63,13 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
     if (userItem == "Low Healing Potion")
     {
-        v = (v + 20);
+        v += 20;
         Console.WriteLine("\n\nPlayer Health: " + v);
         Console.WriteLine("\nYou've used your only potion!");
         Console.WriteLine("\nYou've healed yourself for 20 HP. Your turn has ended. The Goblin makes a move!\n\n");
@@ -80,7 +80,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -92,7 +92,7 @@ else
 }
 
 Console.WriteLine("\n\nThe Goblin makes his attack!\n\nYou find a knife stuck in your chest and take 10 points of damage!");
-v = (v - 10);
+v -= 10;
 Console.WriteLine("Player Health: " + v);
 
 // System Repeats
@@ -100,7 +100,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -109,15 +109,15 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
     if (userAttack == "Basic Attack")
     {
-        x = (x - 10);
+        x -= 10;
         Console.WriteLine("\n\nGoblin Health: " + x);
         Console.WriteLine("\nYou've dealt 10 points of damage to the Goblin.\n\nYour turn has ended. The Goblin makes a move!\n\n");
     }
@@ -127,7 +127,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -144,7 +144,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -163,7 +163,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -172,9 +172,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -190,7 +190,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -207,7 +207,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -224,7 +224,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -233,9 +233,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -251,7 +251,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -268,7 +268,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -286,7 +286,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -295,9 +295,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -313,7 +313,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -330,7 +330,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -347,7 +347,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -356,9 +356,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -374,7 +374,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -391,7 +391,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -408,7 +408,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -417,9 +417,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -435,7 +435,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -452,7 +452,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -469,7 +469,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -478,9 +478,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -496,7 +496,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -513,7 +513,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -530,7 +530,7 @@ Console.WriteLine("Player Health: " + v);
 
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -539,9 +539,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -557,7 +557,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -574,7 +574,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -590,7 +590,7 @@ v = (v - 10);
 Console.WriteLine("Player Health: " + v);
 
 Console.WriteLine("\n-------\n");
-Console.WriteLine("Name: " + UserInputA);
+Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
 Console.WriteLine("\n-------\n");
 Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -599,9 +599,9 @@ Console.WriteLine("\n-------\n");
 Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-UserAction = (Console.ReadLine());
+userAction = (Console.ReadLine());
 
-if (UserAction == "Attack")
+if (userAction == "Attack")
 {
     Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
     string userAttack = (Console.ReadLine());
@@ -617,7 +617,7 @@ if (UserAction == "Attack")
         return;
     }
 }
-else if (UserAction == "Items")
+else if (userAction == "Items")
 {
     Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
     string userItem = (Console.ReadLine());
@@ -634,7 +634,7 @@ else if (UserAction == "Items")
         return;
     }
 }
-else if (UserAction == "End")
+else if (userAction == "End")
 {
     Console.WriteLine("\nVery well. Have a good day.");
     return;
@@ -672,7 +672,7 @@ if (x == 0)
 else
 {
     Console.WriteLine("\n-------\n");
-    Console.WriteLine("Name: " + UserInputA);
+    Console.WriteLine("Name: " + userInputA);
     Console.WriteLine("CURRENT HEALTH: " + v);
     Console.WriteLine("\n-------\n");
     Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -681,9 +681,9 @@ else
     Console.WriteLine("\n\nWhat would you like to do?" + "\n");
     Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-    UserAction = (Console.ReadLine());
+    userAction = (Console.ReadLine());
 
-    if (UserAction == "Attack")
+    if (userAction == "Attack")
     {
         Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
         string userAttack = (Console.ReadLine());
@@ -699,7 +699,7 @@ else
             return;
         }
     }
-    else if (UserAction == "Items")
+    else if (userAction == "Items")
     {
         Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
         string userItem = (Console.ReadLine());
@@ -716,7 +716,7 @@ else
             return;
         }
     }
-    else if (UserAction == "End")
+    else if (userAction == "End")
     {
         Console.WriteLine("\nVery well. Have a good day.");
         return;
@@ -793,7 +793,7 @@ if (v > 0)
 else
 {
     Console.WriteLine("\n-------\n");
-    Console.WriteLine("Name: " + UserInputA);
+    Console.WriteLine("Name: " + userInputA);
     Console.WriteLine("CURRENT HEALTH: " + v);
     Console.WriteLine("\n-------\n");
     Console.WriteLine("\n" + "Goblin" + "\n" + "GOBLIN HEALTH: " + (x));
@@ -802,9 +802,9 @@ else
     Console.WriteLine("\n\nWhat would you like to do?" + "\n");
     Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
-    UserAction = (Console.ReadLine());
+    userAction = (Console.ReadLine());
 
-    if (UserAction == "Attack")
+    if (userAction == "Attack")
     {
         Console.WriteLine("\nHere are your current attacks:\nBasic Attack = 10 Damage\n\nPlease Choose your Attack:\n");
         string userAttack = (Console.ReadLine());
@@ -820,7 +820,7 @@ else
             return;
         }
     }
-    else if (UserAction == "Items")
+    else if (userAction == "Items")
     {
         Console.WriteLine("\nHere are your current items:\n(1x) Low Healing Potion = +20 Health\n\nPlease Choose your Item:\n");
         string userItem = (Console.ReadLine());
@@ -837,7 +837,7 @@ else
             return;
         }
     }
-    else if (UserAction == "End")
+    else if (userAction == "End")
     {
         Console.WriteLine("\nVery well. Have a good day.");
         return;
