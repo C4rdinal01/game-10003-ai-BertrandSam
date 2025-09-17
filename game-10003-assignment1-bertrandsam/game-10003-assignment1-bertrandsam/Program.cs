@@ -13,7 +13,6 @@ Console.WriteLine("Welcome " + (userInputA) + " to my game!");
 Console.WriteLine("In this game, you will be fighting against a single AI Creature: The Goblin.\nI urge you to watch your spelling\nas this game is still Very specific. If you are prompted to choose an option,\nmake sure to spell your answer EXACTLY as it is shown.\n\nThank you for your listening. Please enjoy!\n");
 Console.WriteLine("Good Luck!");
 
-
 // This is where the Player's Name and Health will be displayed.
 // They should be prompted to insert an option from the following:
 // Attack, Item, and End
@@ -27,9 +26,6 @@ int x = (goblinHealth);
 
 // added the "int v" to be able to continually calculate the Player's Health without having a bajillion different unique integers to calculate it based on each possible outcome.
 // added the "int x" for the same purpose but for the Goblin's Health.
-
-
-
 
 // made this so I didnt have the whole thing retyped everytime I needed this screen
 // These are the lines for both the player and goblin's health
@@ -45,7 +41,6 @@ Console.WriteLine("\n\nWhat would you like to do?" + "\n");
 Console.WriteLine("Attack" + "        " + "Items" + "        " + "End" + "\n");
 
 string userAction = (Console.ReadLine());
-
 
 if (userAction == "Attack")
 {
@@ -96,8 +91,6 @@ v -= 10;
 Console.WriteLine("Player Health: " + v);
 
 // System Repeats
-
-
 
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
@@ -159,9 +152,6 @@ Console.WriteLine("\n\nThe Goblin makes his attack!\n\nYour arm explodes with pa
 v = (v - 10);
 Console.WriteLine("Player Health: " + v);
 
-
-
-
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
@@ -221,7 +211,6 @@ else
 Console.WriteLine("\n\nThe Goblin makes his attack!\n\nYou begin to feel dizzy from the loss of blood.\n\nYou take 10 points of damage!");
 v = (v - 10);
 Console.WriteLine("Player Health: " + v);
-
 
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
@@ -283,8 +272,6 @@ Console.WriteLine("\n\nThe Goblin makes his attack!\n\nYour vision is a bit blur
 v = (v - 10);
 Console.WriteLine("Player Health: " + v);
 
-
-
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
@@ -344,7 +331,6 @@ else
 Console.WriteLine("\n\nThe Goblin makes his attack!\n\nYou begin to wonder how long it's been.\n\nYou take 10 points of damage!");
 v = (v - 10);
 Console.WriteLine("Player Health: " + v);
-
 
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
@@ -406,7 +392,6 @@ Console.WriteLine("\n\nThe Goblin makes his attack!\n\nYou wish this would all e
 v = (v - 10);
 Console.WriteLine("Player Health: " + v);
 
-
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
@@ -467,7 +452,6 @@ Console.WriteLine("\n\nThe Goblin makes his attack!\n\nYou feel sweat trickle do
 v = (v - 10);
 Console.WriteLine("Player Health: " + v);
 
-
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
 Console.WriteLine("CURRENT HEALTH: " + v);
@@ -527,7 +511,6 @@ else
 Console.WriteLine("\n\nThe Goblin makes his attack!\n\n...\n\nYou take 10 points of damage!");
 v = (v - 10);
 Console.WriteLine("Player Health: " + v);
-
 
 Console.WriteLine("\n-------\n");
 Console.WriteLine("Name: " + userInputA);
@@ -892,7 +875,5 @@ else
     }
 
 }
-
-
 
 Console.WriteLine("Thank you for playing!");
